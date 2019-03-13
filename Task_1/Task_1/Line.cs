@@ -8,31 +8,55 @@ namespace Task_1
 {
     class Line
     {
-        public void Search(string str)
+        /// <summary>
+        /// Data validation
+        /// </summary>
+        /// <param name="args">Input's array</param>
+       public Line(string[] args)
         {
-            string line = null;
-            if (!Check(str)) return;
-
-            for(int i = 0;i < str.Length; i++ )
+            try {
+                if (args.Length == 0)
+                {
+                    throw new FormatException();
+                }
+                StringBuilder s = new StringBuilder();
+                foreach (string el in args)
+                {
+                    s.AppendFormat(el);
+                }
+                if (s.Length < 2)
+                {
+                    throw new FormatException();
+                }
+            }
+            catch (FormatException)
             {
-                line = "";
-                line=line + str[i];
+                Console.WriteLine("Error! You didn't write line or its lenght is smoller then 2");
+            }
+        }
+        /// <summary>
+        /// This metod makes searching substrings and displays it
+        /// </summary>
+        /// <param name="str">Input's string</param>
+        public void Search_and_Display(string str)
+        {
+            string printed_line;
+
+            for (int i = 0 ;i < str.Length; i++ )
+            {
+                printed_line = string.Empty;
+                printed_line = printed_line + str[i];
                 for (int j = 0; j < str.Length -i-1; j++)
                 {
                     if (str[i+j] != str[i+1+j])
                     {
-                        line += str[i+1+j];
-                       Console.WriteLine(line);
+                        printed_line += str[i+1+j];
+                       Console.WriteLine(printed_line);
                     }
                     else break;
                 }
 
             }
-        }
-
-         private static bool Check(string str)
-        {
-            return (str.Length >= 2) ? true : false;
         }
 
     }
