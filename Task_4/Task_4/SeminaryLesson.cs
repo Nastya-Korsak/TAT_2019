@@ -37,7 +37,7 @@ namespace Task_4
         }
 
         /// <summary>
-        /// Overridden mhethod. Returns the description of the Seminary Lesson
+        /// Overridden method. Returns the description of the Seminary Lesson
         /// </summary>
         /// <returns>Description</returns>
         public override string ToString()
@@ -46,7 +46,7 @@ namespace Task_4
         }
 
         /// <summary>
-        /// Overridden mhethod. To clone object
+        /// Overridden method. To clone object
         /// </summary>
         /// <returns>The cloned object</returns>
         public object Clone()
