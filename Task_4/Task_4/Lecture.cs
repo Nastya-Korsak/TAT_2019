@@ -87,7 +87,7 @@ namespace Task_4
         }
 
         /// <summary>
-        /// Methid for return lists with Laboratory Lesson and Seminary Lesson
+        /// Method for return lists with Laboratory Lesson and Seminary Lesson
         /// </summary>
         /// <returns>Tuple with lists with Laboratory Lesson and Seminary Lesson</returns>
         public (List<LaboratoryLesson>, List<SeminaryLesson>) ReturnData()
@@ -97,7 +97,7 @@ namespace Task_4
         }
 
         /// <summary>
-        /// Overridden mhethod. Returns the description of the lecture
+        /// Overridden method. Returns the description of the lecture
         /// </summary>
         /// <returns>Description</returns>
         public override string ToString()
@@ -106,7 +106,7 @@ namespace Task_4
         }
 
         /// <summary>
-        /// Overridden mhethod. To clone object
+        /// Overridden method. To clone object
         /// </summary>
         /// <returns>The cloned object</returns>
         public object Clone()
