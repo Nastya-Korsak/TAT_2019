@@ -11,7 +11,7 @@ namespace Task_5
         /// Method for print time of flight object
         /// </summary>
         /// <param name="obj">Аlying object</param>
-        /// <param name="time">Еime of flight</param>
+        /// <param name="time">Time of flight</param>
         public void Print(object obj ,double time)
         {
             if(obj is Bird || obj is Plane)
