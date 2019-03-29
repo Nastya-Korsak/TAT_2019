@@ -55,7 +55,7 @@ namespace Task_4
         }
 
         /// <summary>
-        /// Overridden mhethod. To compare the two object.
+        /// Overridden method. To compare the two object.
         /// </summary>
         /// <param name="obj">Compared object</param>
         /// <returns>Comparison result</returns>
