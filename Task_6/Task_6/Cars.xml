@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<cars>
+  <auto>
+    <brand>mercedes-benz</brand>
+    <model>M-Class</model>
+    <count>3</count>
+    <price>14670</price>
+  </auto>
+  <auto>
+    <brand>ford</brand>
+    <model>fiesta</model>
+    <count>12</count>
+    <price>2500</price>
+  </auto>
+  <auto>
+    <brand>volvo</brand>
+    <model>XC60</model>
+    <count>3</count>
+    <price>13000</price>
+  </auto>
+  <auto>
+    <brand>lexus</brand>
+    <model>rx</model>
+    <count>4</count>
+    <price>10000</price>
+  </auto>
+  <auto>
+    <brand>mercedes-benz</brand>
+    <model> SLR-McLaren</model>
+    <count>20</count>
+    <price>19320</price>
+  </auto>
+  <auto>
+    <brand>ford</brand>
+    <model>focus</model>
+    <count>12</count>
+    <price>6500</price>
+  </auto>
+</cars>
