@@ -1,6 +1,0 @@
-D:\EPAM\Task_2\Task_2\bin\Debug\Task_2.exe.config
-D:\EPAM\Task_2\Task_2\bin\Debug\Task_2.exe
-D:\EPAM\Task_2\Task_2\bin\Debug\Task_2.pdb
-D:\EPAM\Task_2\Task_2\obj\Debug\Task_2.csproj.CoreCompileInputs.cache
-D:\EPAM\Task_2\Task_2\obj\Debug\Task_2.exe
-D:\EPAM\Task_2\Task_2\obj\Debug\Task_2.pdb

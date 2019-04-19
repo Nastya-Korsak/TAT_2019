@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Letters>
+  <Letter value="б" pairedLetter="п" code="3"/>
+  <Letter value="в" pairedLetter="ф" code="30"/>
+  <Letter value="г" pairedLetter="к" code="3"/>
+  <Letter value="д" pairedLetter="т" code="3"/>
+  <Letter value="ж" pairedLetter="ш" code="3"/>
+  <Letter value="з" pairedLetter="с" code="3"/>
+</Letters>

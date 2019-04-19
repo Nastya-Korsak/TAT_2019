@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Task_2
 {
-    class ErrorHandling
+    public class ErrorHandling
     {
         /// <summary>
         /// This method chack that array isn't empty
@@ -17,7 +13,7 @@ namespace Task_2
         {
             try
             {
-                if (args.Length == 0)
+                if (args==null || args.Length == 0)
                 {
                     throw new FormatException();
                 }
@@ -36,21 +32,21 @@ namespace Task_2
         public bool CheckStress(string[] args)
         {
             string line = args[0];
-            int a = -1;
-            int b = -1;
+            int positionPlus = -1;
+            int positionLetterE = -1;
             try
             {
-                a=line.IndexOf("+");
-                b=line.IndexOf("ё");
-                int j = 0;
+                positionPlus=line.IndexOf("+");
+                positionLetterE=line.IndexOf("ё");
+                int numbeOfVowels = 0;
                 for(int i = 0; i < line.Length; i++)
                 {
                     if (line[i] == 'а' || line[i] == 'е' || line[i] == 'и' || line[i] == 'о' || line[i] == 'у' || line[i] == 'ы' || line[i] == 'э' || line[i] == 'ю' || line[i] == 'я')
                     {
-                        j++;
+                        numbeOfVowels++;
                     }
                 }
-                if((a==-1) && (b == -1) && (j!=1))
+                if((positionPlus==-1) && (positionLetterE == -1) && (numbeOfVowels!=1))
                 {
                     throw new FormatException();
                 }

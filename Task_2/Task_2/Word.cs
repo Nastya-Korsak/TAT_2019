@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace Task_2
 {
-    class Word
+    public class Word
     {
         /// <summary>
         /// Changes inputed string on the sound type
