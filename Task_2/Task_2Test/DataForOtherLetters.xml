@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Letters>
-  <Letter value="о" pairedLetter="а" code="5"/>
-  <Letter value="ь" pairedLetter="`" code="6"/>
-  <Letter value="ъ" pairedLetter="ъ" code="6"/>
-  <Letter value="+" pairedLetter="+" code="6"/>
-</Letters>
