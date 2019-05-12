@@ -9,12 +9,11 @@ using System.Threading.Tasks;
 
 namespace Task_9
 {
-    class MailChangNamePage
+    public class MailChangNamePage
     {
         By changeNameLocator = By.XPath("//input[@name='FirstName']");
         By saveChangesLocator = By.XPath("//span[contains(.,'Сохранить')]");
         WebDriverWait wait;
-        IWebElement element;
 
         private ChromeDriver driver;
 

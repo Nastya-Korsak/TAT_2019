@@ -8,21 +8,21 @@ namespace Task_9
     {
         static void Main(string[] args)
         {
-            ChromeDriver chromeDriver = new ChromeDriver();
-            LoginPageMail loginPageMail = new LoginPageMail(chromeDriver);
-            MailHomePage mailHomePage = loginPageMail.loginAs("lvorchik", "1234l4321");
-            mailHomePage.SendMasseng("lvorchik@yandex.by", "hjffkt");
+            //    ChromeDriver chromeDriver = new ChromeDriver();
+            //    LoginPageMail loginPageMail = new LoginPageMail(chromeDriver);
+            //    MailHomePage mailHomePage = loginPageMail.loginAs("lvorchik", "1234l4321");
+            //    mailHomePage.SendMasseng("lvorchik@yandex.by", "hjffkt");
 
-            LoginPageYandex loginPageYandex = new LoginPageYandex(chromeDriver);
-            YandexHomePage yandexHomePage = loginPageYandex.loginAs("lvorchik", "1234l4321");
-            yandexHomePage.ReadAndReplyMessage("Ольга");
+            //    LoginPageYandex loginPageYandex = new LoginPageYandex(chromeDriver);
+            //    YandexHomePage yandexHomePage = loginPageYandex.loginAs("lvorchik", "1234l4321");
+            //    yandexHomePage.ReadAndReplyMessage("Ольга");
 
-            MailHomePage mailHomePage1 = loginPageMail.loginAs("lvorchik", "1234l4321");
-            mailHomePage1.openMasseng();
-            string name = mailHomePage1.copyMessege();
-            MailChangNamePage mailChangNamePage= mailHomePage1.goToChangNamePaege();
-            mailChangNamePage.changeName(name);
-            mailChangNamePage.saveChanges();
+            //    MailHomePage mailHomePage1 = loginPageMail.loginAs("lvorchik", "1234l4321");
+            //    mailHomePage1.openMasseng();
+            //    string name = mailHomePage1.copyMessege();
+            //    MailChangNamePage mailChangNamePage= mailHomePage1.goToChangNamePaege();
+            //    mailChangNamePage.changeName(name);
+            //    mailChangNamePage.saveChanges();
         }
     }
 }

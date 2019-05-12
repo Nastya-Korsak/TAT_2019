@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Task_9
 {
-    class MailHomePage
+    public class MailHomePage
     {
         By newLetterButtonLocator = By.XPath("//span[contains(.,'Написать письмо')]");
         By usernameLocator = By.XPath("//textarea[@tabindex='4']");

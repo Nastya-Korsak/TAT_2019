@@ -10,7 +10,7 @@ using System.Threading;
 
 namespace Task_9
 {
-    class LoginPageMail
+    public class LoginPageMail
     {
         By usernameLocator = By.XPath("//input[@id='mailbox:login']");
         By passwordLocator = By.XPath("//input[@id='mailbox:password']");
@@ -37,13 +37,15 @@ namespace Task_9
 
         public LoginPageMail typePassword(string password)
         {
+            wait.Until(ExpectedConditions.ElementToBeClickable(passwordLocator));
             element = wait.Until(r => driver.FindElement(passwordLocator));
             element.FindElement(passwordLocator).SendKeys(password);
             return this;
         }
 
-        public MailHomePage submitLogin()
+        public MailHomePage SubmitLogin()
         {
+            //wait.Until(ExpectedConditions.ElementToBeClickable(loginButtonLocator));
             driver.FindElement(loginButtonLocator).Submit();
             return new MailHomePage(driver);
         }
@@ -52,7 +54,7 @@ namespace Task_9
         {
             typeUsername(username);
             typePassword(password);
-            return submitLogin();
+            return SubmitLogin();
         }
     }
 }
