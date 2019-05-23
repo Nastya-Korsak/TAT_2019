@@ -1,0 +1,16 @@
+{
+  "Adresses": [
+    {
+      "addressID": 1,
+      "city": "///",
+      "street": "hghg",
+      "houseNumber": 12
+    },
+    {
+      "addressID": 2,
+      "city": "...",
+      "street": "fgfg",
+      "houseNumber": 1
+    }
+  ]
+}

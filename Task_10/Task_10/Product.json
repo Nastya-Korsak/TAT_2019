@@ -1,0 +1,22 @@
+{
+  "Products": [
+    {
+      "productID": 1,
+      "productName": "Мишка",
+      "quantity": 4,
+      "fabricatorID": 2,
+      "warehouseID": 1,
+      "deliveryID": 1,
+      "productionDate": 1.1
+    },
+    {
+      "productID": 2,
+      "productName": "Зайчонок",
+      "quantity": 3,
+      "fabricatorID": 1,
+      "warehouseID": 1,
+      "deliveryID": 2,
+      "productionDate": 1.1
+    }
+  ]
+}
