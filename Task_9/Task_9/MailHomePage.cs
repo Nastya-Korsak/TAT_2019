@@ -14,7 +14,6 @@ namespace Task_9
         By newLetterButtonLocator = By.XPath("//span[contains(.,'Написать письмо')]");
         By usernameLocator = By.XPath("//textarea[@tabindex='4']");
         By letterLocator = By.XPath(".//tr[@class='mceFirst mceLast']//iframe");
-        //By sendMessengerLocator = By.XPath("//span[contains(.,'Отправить')]");
         By sendMessengerLocator = By.XPath("//div[@data-name = 'send'][1]");
         By openMassengLocator = By.XPath("//div[@class='b-datalist__body']/div[1]");
         By copyMassengLocator = By.XPath("//div[@class = 'js-helper js-readmsg-msg']//div//div//div");
@@ -48,11 +47,6 @@ namespace Task_9
 
         public MailHomePage typeLetter(string letter)
         {
-            //driver.FindElement(By.XPath("//span[contains(.,'Убрать оформление')]")).Click();
-            //wait.Until(ExpectedConditions.ElementToBeClickable(letterLocator));
-            //element = wait.Until(r => driver.FindElement(letterLocator));
-            //element.Clear();
-            //element.SendKeys(letter);
             driver.SwitchTo().Frame(driver.FindElement(letterLocator));
             driver.FindElement(By.Id("tinymce")).Click();
             driver.FindElement(By.Id("tinymce")).Clear();
@@ -64,7 +58,6 @@ namespace Task_9
         public MailHomePage clickSendMessenger()
         {
             wait.Until(ExpectedConditions.ElementToBeClickable(sendMessengerLocator));
-            //driver.FindElements(sendMessengerLocator)[1].Click();
             element = wait.Until(r => driver.FindElement(sendMessengerLocator));
             element.Click();
             return this;

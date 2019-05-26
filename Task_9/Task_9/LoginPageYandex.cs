@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Task_9
 {
-    class LoginPageYandex
+    public class LoginPageYandex
     {
         By usernameLocator = By.XPath("//input[@type='text']");
         By passwordLocator = By.XPath("//input[@type='password']");

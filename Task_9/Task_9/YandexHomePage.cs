@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Task_9
 {
-    class YandexHomePage
+    public class YandexHomePage
     {
        
         By openMassengLocator = By.XPath("//div[@class='ns-view-container-desc mail-MessagesList js-messages-list']/div[1]");

@@ -1,11 +1,9 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using Task_9;
-using NUnit.Framework;
-using System.Threading;
 using OpenQA.Selenium.Support.UI;
 using System;
+using Task_9;
 
 namespace Tests
 {
