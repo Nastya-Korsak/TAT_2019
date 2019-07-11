@@ -14,7 +14,7 @@ namespace Task_2
         /// <param name="letter">The letter of the word</param>
         /// /// <param name="l">Return paired letter if validation is successful</param>
         /// <returns>Return 1 if validation is successful</returns>
-        public int ChangeVowel_1(char letter, out char l)
+        public int ChangeVowel1(char letter, out char l)
         {
             if (letter == 'а')
             {
@@ -48,7 +48,7 @@ namespace Task_2
         /// <param name="letter">The letter of the word</param>
         /// <param name="l">Return paired letter if validation is successful</param>
         /// <returns>Return 2 if validation is successful</returns>
-        public int ChangeVowel_2(char letter, out char l)
+        public int ChangeVowel2(char letter, out char l)
         {
             if (letter == 'е')
             {
@@ -87,7 +87,7 @@ namespace Task_2
         /// <param name="letter">The letter of the word</param>
         /// <param name="l">Return paired letter if validation is successful</param>
         /// <returns>Return 3 if validation is successful</returns>
-        public int ChangeConsonant_1(char letter, out char l)
+        public int ChangeConsonant1(char letter, out char l)
         {
             if (letter == 'б')
             {
@@ -131,7 +131,7 @@ namespace Task_2
         /// <param name="letter">The letter of the word</param>
         /// <param name="l">Return paired letter if validation is successful</param>
         /// <returns>Return 4 if validation is successful</returns>
-        public int ChangeConsonant_2(char letter, out char l)
+        public int ChangeConsonant2(char letter, out char l)
         {
             if (letter == 'п')
             {

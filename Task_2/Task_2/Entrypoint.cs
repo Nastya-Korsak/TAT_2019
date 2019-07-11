@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Task_2
 {
+    /// <summary>
+    /// This class is Entrypoint for application. Contains method main.
+    /// </summary>
     class Entrypoint
     {
         /// <summary>
@@ -14,15 +17,14 @@ namespace Task_2
         /// <param name="args">Iputed array</param>
         static void Main(string[] args)
         {
-
-            ErrorHandling h = new ErrorHandling();
-            if (h.CheckEmptyString(args))
+            ErrorHandling searchError = new ErrorHandling();
+            if (searchError.CheckEmptyString(args))
             {
-               if(h.CheckStress(args))
+               if(searchError.CheckStress(args))
                 {
-                    Word w = new Word();
+                    Word changeWord = new Word();
                     StringBuilder outputLine = new StringBuilder();
-                    outputLine=w.ChangeLetters(args);
+                    outputLine=changeWord.ChangeLetters(args);
                     Console.WriteLine(outputLine);
                 }
             }

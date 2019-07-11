@@ -23,16 +23,16 @@ namespace Task_2
             //Assing each letter in string a code and a pair
             for(int i = 0; i < line.Length; i++)
             {
-                helpKod[i]=a.ChangeConsonant_1(line[i],out helpLine[i]);
+                helpKod[i]=a.ChangeConsonant1(line[i],out helpLine[i]);
                 if (helpKod[i] == 0)
                 {
-                    helpKod[i] = a.ChangeConsonant_2(line[i], out helpLine[i]);
+                    helpKod[i] = a.ChangeConsonant2(line[i], out helpLine[i]);
                     if (helpKod[i] == 0)
                     {
-                        helpKod[i] = a.ChangeVowel_1(line[i], out helpLine[i]);
+                        helpKod[i] = a.ChangeVowel1(line[i], out helpLine[i]);
                         if (helpKod[i] == 0)
                         {
-                            helpKod[i] = a.ChangeVowel_2(line[i], out helpLine[i]);
+                            helpKod[i] = a.ChangeVowel2(line[i], out helpLine[i]);
                             if(helpKod[i] == 0)
                             {
                                 helpKod[i] = a.OtherLetters(line[i], out helpLine[i]);
