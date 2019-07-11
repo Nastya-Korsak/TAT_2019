@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Task_1
 {
+    /// <summary>
+    /// This class for change imputed string
+    /// </summary>
     class Line
     {
         /// <summary>
@@ -38,7 +41,7 @@ namespace Task_1
         /// This metod makes searching substrings and displays it
         /// </summary>
         /// <param name="str">Input's string</param>
-        public void Search_and_Display(string str)
+        public void SearchAndDisplay(string str)
         {
             string printed_line;
 
@@ -55,7 +58,6 @@ namespace Task_1
                     }
                     else break;
                 }
-
             }
         }
 

@@ -5,21 +5,21 @@ using System.Text;
 namespace Task_1
 {
     /// <summary>
-    /// Entry point
+    /// This method is Entry point. Calling methods on the object Line for chenge string.
     /// </summary>
     class Entrypoint
     {
         static void Main(string[] args)
         {
-            Line l = new Line(args);
+            Line objLine = new Line(args);
 
-            StringBuilder s = new StringBuilder();
+            StringBuilder inputedString = new StringBuilder();
             foreach (string el in args)
             {
-                s.AppendFormat(el);
+                inputedString.AppendFormat(el);
             }
-            string line = s.ToString();
-            l.Search_and_Display(line);
+            string line = inputedString.ToString();
+            objLine.SearchAndDisplay(line);
         }
     }
 }
