@@ -5,7 +5,7 @@ using System.Text;
 namespace Task_1
 {
     /// <summary>
-    /// This method is Entry point. Calling methods on the object Line for chenge string.
+    a/// This method is Entry point. Calling methods on the object Line for change string.
     /// </summary>
     class Entrypoint
     {
