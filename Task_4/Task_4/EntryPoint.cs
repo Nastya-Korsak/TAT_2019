@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace Task_4
 {
+    /// <summary>
+    /// This program discribes educational disciplines.
+    /// </summary>
     class EntryPoint
     {
         /// <summary>
-        /// Entry point this program. This program discribes educational disciplines.
+        /// Entry point this program.
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)
