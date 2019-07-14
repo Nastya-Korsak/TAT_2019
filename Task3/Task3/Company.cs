@@ -8,27 +8,35 @@ namespace Task3
     /// </summary>
     class Company
     {
-        List<Employee> employees = new List<Employee> { };
-        readonly Employee[] employee = new Employee[50];
+        private  List<Employee> employees = new List<Employee> { };
+        static int numberOfEmployees = 50;
+        readonly Employee[] employee = new Employee[numberOfEmployees];
 
+        /// <summary>
+        /// Puts in array different emloyees
+        /// </summary>
         public Company()
         {
-            for (int i = 0; i < 20; i++)
+            int numberOfJunior = 20;
+            int numberOfMiddle = 15;
+            int numberOfSenior = 10;
+
+            for (int i = 0; i < numberOfJunior; i++)
             {
                 employee[i] = new Junior();
                 employees.Add(employee[i]);
             }
-            for (int i = 20; i < 35; i++)
+            for (int i = numberOfJunior; i < numberOfJunior+ numberOfMiddle; i++)
             {
                 employee[i] = new Middle();
                 employees.Add(employee[i]);
             }
-            for (int i = 35; i < 45; i++)
+            for (int i = numberOfJunior + numberOfMiddle; i < numberOfJunior + numberOfMiddle + numberOfSenior; i++)
             {
                 employee[i] = new Senior();
                 employees.Add(employee[i]);
             }
-            for (int i = 45; i < 50; i++)
+            for (int i = numberOfJunior + numberOfMiddle + numberOfSenior; i < numberOfEmployees; i++)
             {
                 employee[i] = new Lead();
                 employees.Add(employee[i]);
@@ -55,22 +63,21 @@ namespace Task3
                 if (var is Lead)
                 {
                     lead += 1;
-                    continue;
                 }
+                else
                 if (var is Senior)
                 {
                     senior += 1;
-                    continue;
                 }
+                else
                 if (var is Middle)
                 {
                     middle += 1;
-                    continue;
                 }
+                else
                 if (var is Junior)
                 {
                     junior += 1;
-                    continue;
                 }
             }
             Console.WriteLine("Lead=" + lead);

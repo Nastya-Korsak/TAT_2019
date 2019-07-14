@@ -4,9 +4,9 @@ using System.Collections.Generic;
 namespace Task3
 {
     /// <summary>
-    /// class of second criterion
+    /// class for choose employees uses criteria count of efficiency and minimum cost
     /// </summary>
-    class SecondCriterion : Optimizer
+    class EfficiencyAndMinCostCriterion : Optimizer
     {
         public override List<Employee> Choose(List<Employee> employees, int efficiency)
         {

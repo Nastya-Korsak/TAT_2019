@@ -5,9 +5,9 @@ using System.Collections.Generic;
 namespace Task3
 {
     /// <summary>
-    /// class of first criterion
+    /// class for choose employees uses criteria count of money
     /// </summary>
-    class FirstCriterion : Optimizer
+    class MoneyCriterion : Optimizer
     {
         public override List<Employee> Choose(List<Employee> employees, int money)
         {
