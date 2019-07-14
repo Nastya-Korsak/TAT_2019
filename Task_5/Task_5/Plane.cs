@@ -5,7 +5,7 @@
     /// </summary>
     class Plane : IFlyable
     {
-        Point point;
+        private  Point point;
         double speed;
         double timeOfFlight;
         private int distance;
@@ -38,11 +38,14 @@
         /// <returns>Return time in transit</returns>
         public double GetFlyTime()
         {
-            while (distance<=10)
+            int speedChange = 10;
+            int distanceChange = 10;
+
+            while (distance <= distanceChange)
             {
-                timeOfFlight += 10 / speed;
-                distance -= 10;
-                speed += 10;
+                timeOfFlight += distanceChange / speed;
+                distance -= distanceChange;
+                speed += speedChange;
             }
             timeOfFlight += distance / speed;
             return timeOfFlight;

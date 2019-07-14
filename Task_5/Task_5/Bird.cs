@@ -38,13 +38,16 @@ namespace Task_5
         /// <returns>Return time in transit</returns>
         public double GetFlyTime()
         {
+            int maxSpeedForBird = 20;
             Random rnd = new Random();
-            speed= rnd.Next(0,20);
+            speed= rnd.Next(0, maxSpeedForBird);
+
             if (speed == 0 )
             {
                 point.SetPoint(0, 0, 0);
                 return 0;
             }
+
             timeOfFlight = (double)distance / speed;
             return timeOfFlight;
         }
