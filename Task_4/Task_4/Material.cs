@@ -13,6 +13,7 @@ namespace Task_4
     {
         protected Guid guid;
         protected string description;
+        int maxDescriptionLenght = 256;
 
         /// <summary>
         /// Sets the GUID when creating object
@@ -39,7 +40,7 @@ namespace Task_4
         {
             try
             {
-                if (text.Length <= 256)
+                if (text.Length <= maxDescriptionLenght)
                 {
                     description = text;
                 }
@@ -50,12 +51,12 @@ namespace Task_4
             }
             catch(FormatException)
             {
-                Console.WriteLine("Error! Text Lenght is more than 256!");
+                Console.WriteLine("Error! Text Lenght is more than" + maxDescriptionLenght + "!");
             }
         }
 
         /// <summary>
-        /// Overridden method. To compare the two object.
+        /// Overridden mhethod. To compare the two object.
         /// </summary>
         /// <param name="obj">Compared object</param>
         /// <returns>Comparison result</returns>
@@ -66,7 +67,10 @@ namespace Task_4
                 Material disciplineObject = (Material)obj;
                 return this.GetGuid() == disciplineObject.GetGuid() ? true : false;
             }
-            else return false;
+            else
+            {
+                return false;
+            }
         }
     }
 }

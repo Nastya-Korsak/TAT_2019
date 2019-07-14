@@ -14,6 +14,7 @@ namespace Task_4
         private List<Lecture> lectures;
         protected Guid guid;
         private string description;
+        int maxDescriptionLenght = 256;
 
         /// <summary>
         /// For create object withoout data
@@ -75,7 +76,7 @@ namespace Task_4
         {
             try
             {
-                if (text.Length <= 256)
+                if (text.Length <= maxDescriptionLenght)
                 {
                     description = text;
                 }
@@ -86,7 +87,7 @@ namespace Task_4
             }
             catch (FormatException)
             {
-                Console.WriteLine("Error! Text Lenght is more than 256!");
+                Console.WriteLine("Error! Text Lenght is more than "+ maxDescriptionLenght+"!");
             }
         }
 
@@ -120,7 +121,10 @@ namespace Task_4
                 Discipline disciplineObject = (Discipline)obj;
                 return this.GuidDiscipline() == disciplineObject.GuidDiscipline() ? true : false;
             }
-            else return false;
+            else
+            {
+                return false;
+            }
         }
 
         /// <summary>

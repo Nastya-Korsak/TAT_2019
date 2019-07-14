@@ -24,7 +24,7 @@ namespace Task_4
             get { return format; }
             set
             {
-                if(value=="Unknown" || value == "PPT" || value == "PDF")
+                if (value== "Unknown" || value == "PPT" || value == "PDF")
                 {
                     format = value;
                 }

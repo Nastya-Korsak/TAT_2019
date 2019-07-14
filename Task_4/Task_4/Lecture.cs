@@ -12,6 +12,7 @@ namespace Task_4
         List<SeminaryLesson> seminary;
         Presentation presentation;
         private string lectureText;
+        int maxLectureTextLenght = 10000;
 
         /// <summary>
         /// For create object withoout data
@@ -70,7 +71,7 @@ namespace Task_4
             {
                 try
                 {
-                    if (value.Length <= 10000)
+                    if (value.Length <= maxTextLenght)
                     {
                         lectureText = value;
                     }
@@ -87,7 +88,7 @@ namespace Task_4
         }
 
         /// <summary>
-        /// Method for return lists with Laboratory Lesson and Seminary Lesson
+        /// Methid for return lists with Laboratory Lesson and Seminary Lesson
         /// </summary>
         /// <returns>Tuple with lists with Laboratory Lesson and Seminary Lesson</returns>
         public (List<LaboratoryLesson>, List<SeminaryLesson>) ReturnData()
@@ -97,7 +98,7 @@ namespace Task_4
         }
 
         /// <summary>
-        /// Overridden method. Returns the description of the lecture
+        /// Overridden mhethod. Returns the description of the lecture
         /// </summary>
         /// <returns>Description</returns>
         public override string ToString()
@@ -106,7 +107,7 @@ namespace Task_4
         }
 
         /// <summary>
-        /// Overridden method. To clone object
+        /// Overridden mhethod. To clone object
         /// </summary>
         /// <returns>The cloned object</returns>
         public object Clone()

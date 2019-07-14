@@ -9,7 +9,7 @@ namespace Task_4
     class EntryPoint
     {
         /// <summary>
-        /// Entry point this program
+        /// Entry point this program. This program discribes educational disciplines.
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)

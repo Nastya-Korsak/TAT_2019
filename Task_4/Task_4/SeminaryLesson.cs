@@ -37,7 +37,7 @@ namespace Task_4
         }
 
         /// <summary>
-        /// Overridden method. Returns the description of the Seminary Lesson
+        /// Overridden mhethod. Returns the description of the Seminary Lesson
         /// </summary>
         /// <returns>Description</returns>
         public override string ToString()
@@ -46,12 +46,12 @@ namespace Task_4
         }
 
         /// <summary>
-        /// Overridden method. To clone object
+        /// Overridden mhethod. To clone object
         /// </summary>
         /// <returns>The cloned object</returns>
         public object Clone()
         {
-            SeminaryLesson seminaryLesson = new SeminaryLesson(Task, QuestionAndAnswer);
+            SeminaryLesson seminaryLesson = new SeminaryLesson(this.Task, this.QuestionAndAnswer);
             return seminaryLesson;
         }
     }
