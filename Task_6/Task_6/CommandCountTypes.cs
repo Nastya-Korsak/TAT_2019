@@ -6,6 +6,7 @@
     class CommandCountTypes : ICommand
     {
         DataBase dataBase;
+
         /// <summary>
         /// Constructor for identification Date Base for work
         /// </summary>

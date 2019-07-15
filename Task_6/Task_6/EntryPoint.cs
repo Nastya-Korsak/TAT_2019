@@ -11,11 +11,22 @@ namespace Task_6
         {
             try
             {
-                WorkClass workClass = new WorkClass(args[0]);
+                if (args.Length==2)
+                {
+                    WorkClass workClass = new WorkClass(args[0], args[1]);
+                }
+                else
+                {
+                    throw new FormatException();
+                }
             }
             catch (System.IndexOutOfRangeException)
             {
                 Console.WriteLine("Error! You didn't put name XML-file");
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Error! You must put two XML-file");
             }
         }
     }

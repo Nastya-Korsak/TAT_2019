@@ -21,7 +21,7 @@
         /// </summary>
         public void Execute()
         {
-            dataBase.GetAveragePrice();
+            this.dataBase.GetAveragePrice();
         }
     }
 }

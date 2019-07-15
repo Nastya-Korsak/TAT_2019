@@ -8,21 +8,31 @@ namespace Task_6
     /// </summary>
     class WorkClass
     {
+        delegate void Delegat();
+        event Delegat Event;
+
         /// <summary>
         /// Constructor for defineds other object, and work with commands 
         /// </summary>
-        /// <param name="nameXML">Name xml document</param>
-        public WorkClass(string nameXML)
+        /// <param name="carsXML">Name xml document</param>
+        public WorkClass(string carsXML, string trucksXML)
         {
-            DataBase dataBase = new DataBase(@"D:\EPAM\Task_6\Task_6\" + nameXML);
+            DataBase passengerCarData = PassengerCarData.GetInstance(@"D:\EPAM\Task_6\Task_6\" + carsXML);
+            DataBase lorryData = LorryData.GetInstance(@"D:\EPAM\Task_6\Task_6\" + carsXML);
 
-            Dictionary<string, ICommand> listCommand = new Dictionary<string, ICommand>(4);
-            listCommand.Add("count types", new CommandCountTypes(dataBase));
-            listCommand.Add("count all", new CommandCountAll(dataBase));
-            listCommand.Add("average price", new CommandAveragePrice(dataBase));
-            listCommand.Add("average price type", new CommandAveragePriceType(dataBase));
+            Dictionary<string, ICommand> listCommand = new Dictionary<string, ICommand>()
+            {
+                { "count types car", new CommandCountTypes(passengerCarData) },
+                { "count all car", new CommandCountAll(passengerCarData ) },
+                { "average price car", new CommandAveragePrice(passengerCarData) },
+                { "average price car type", new CommandAveragePriceType(passengerCarData) },
+                { "count types truck", new CommandCountTypes(lorryData) },
+                { "count all truck", new CommandCountAll(lorryData) },
+                { "average price truck", new CommandAveragePrice(lorryData) },
+                { "average price truck type", new CommandAveragePriceType(lorryData) }
+            };
 
-            MotorShow motorShow = new MotorShow();
+            List < MotorShow > motorShowList = new List<MotorShow>();
 
             bool exit = false;
 
@@ -33,8 +43,21 @@ namespace Task_6
 
                 if (listCommand.ContainsKey(command))
                 {
-                    motorShow.SetCommand(listCommand[command]);
-                    motorShow.GetInformation();
+                   motorShowList.Add(new MotorShow());
+                   motorShowList[motorShowList.Count-1].SetCommand(listCommand[command]);
+                   Event+= motorShowList[motorShowList.Count - 1].GetInformation;
+                }
+                else if (command=="execute")
+                {
+                    try
+                    {
+                        Event();
+                        Event = null;
+                    }
+                    catch (System.NullReferenceException)
+                    {
+                        continue;
+                    }
                 }
                 else if (command == "exit")
                 {
