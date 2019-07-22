@@ -1,0 +1,16 @@
+{
+  "Fabricators": [
+    {
+      "fabricatorID": 1,
+      "Name": "SoftToy",
+      "addressID": 1,
+      "countri": "Russia"
+    },
+    {
+      "fabricatorID": 2,
+      "Name": "CuteToy",
+      "addressID": 1,
+      "countri": "USA"
+    }
+  ]
+}

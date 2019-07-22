@@ -1,0 +1,9 @@
+{
+  "Warehouses": [
+    {
+      "warehouseID": 1,
+      "Name": "HouseForThings",
+      "address": "gg"
+    }
+  ]
+}
